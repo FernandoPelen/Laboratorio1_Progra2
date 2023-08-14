@@ -1,0 +1,79 @@
+public class PersonajeAccion {
+    
+    private String nombre;
+    private double altura;
+    private double peso;
+    private String colorPiel;
+    private int porcentajePoder;
+    private String estado;
+
+    public PersonajeAccion(String nombre, double altura, double peso, String colorPiel, int porcentajePoder, String estado) {
+        this.nombre = nombre;
+        this.altura = altura;
+        this.peso = peso;
+        this.colorPiel = colorPiel;
+        this.porcentajePoder = porcentajePoder;
+        this.estado = estado;
+    }
+
+    public void atacar() {
+        System.out.println(nombre + " está atacando.");
+    }
+
+    public void correr() {
+        System.out.println(nombre + " está corriendo.");
+    }
+
+    public void saltar() {
+        System.out.println(nombre + " está saltando.");
+    }
+
+    public void esquivar() {
+        System.out.println(nombre + " está esquivando.");
+    }
+
+    public void morir() {
+        estado = "muerto";
+        System.out.println(nombre + " ha muerto.");
+    }
+
+    // Getters y setters para las propiedades
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public String getColorPiel() {
+        return colorPiel;
+    }
+
+    public int getPorcentajePoder() {
+        return porcentajePoder;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public static void main(String[] args) {
+        PersonajeAccion jugador1 = new PersonajeAccion("Héroe", 1.8, 75, "blanco", 90, "vivo");
+
+        jugador1.atacar();
+        jugador1.correr();
+        jugador1.saltar();
+        jugador1.esquivar();
+        jugador1.morir();
+    }
+}
