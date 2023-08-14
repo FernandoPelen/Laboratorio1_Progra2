@@ -1,0 +1,78 @@
+
+public class Vehiculo {
+    // Atributos
+    private String marca;
+    private String modelo;
+    private int año;
+    private String numeroPlaca;
+    private double precio;
+
+    // Constructor
+    public Vehiculo(String marca, String modelo, int año, String numeroPlaca, double precio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+        this.numeroPlaca = numeroPlaca;
+        this.precio = precio;
+    }
+
+    // Métodos Getters y Setters
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
+    }
+
+    public String getNumeroPlaca() {
+        return numeroPlaca;
+    }
+
+    public void setNumeroPlaca(String numeroPlaca) {
+        this.numeroPlaca = numeroPlaca;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+}
+
+public class Taller {
+    public static void main(String[] args) {
+        // Crear objetos Vehiculo
+        Vehiculo vehiculo1 = new Vehiculo("Toyota", "Corolla", 2022, "123ABC", 25000.0);
+        Vehiculo vehiculo2 = new Vehiculo("Ford", "Mustang", 2021, "456DEF", 45000.0);
+        Vehiculo vehiculo3 = new Vehiculo("Honda", "Civic", 2023, "789GHI", 22000.0);
+        Vehiculo vehiculo4 = new Vehiculo("Chevrolet", "Cruze", 2020, "101JKL", 20000.0);
+        Vehiculo vehiculo5 = new Vehiculo("Nissan", "Altima", 2022, "112MNO", 28000.0);
+
+        // Imprimir información de los vehículos
+        System.out.println("Información de los vehículos:");
+        System.out.println(vehiculo1.getMarca() + " " + vehiculo1.getModelo() + " " + vehiculo1.getAño() + " - Precio: $" + vehiculo1.getPrecio());
+        System.out.println(vehiculo2.getMarca() + " " + vehiculo2.getModelo() + " " + vehiculo2.getAño() + " - Precio: $" + vehiculo2.getPrecio());
+        System.out.println(vehiculo3.getMarca() + " " + vehiculo3.getModelo() + " " + vehiculo3.getAño() + " - Precio: $" + vehiculo3.getPrecio());
+        System.out.println(vehiculo4.getMarca() + " " + vehiculo4.getModelo() + " " + vehiculo4.getAño() + " - Precio: $" + vehiculo4.getPrecio());
+        System.out.println(vehiculo5.getMarca() + " " + vehiculo5.getModelo() + " " + vehiculo5.getAño() + " - Precio: $" + vehiculo5.getPrecio());
+    }
+}
