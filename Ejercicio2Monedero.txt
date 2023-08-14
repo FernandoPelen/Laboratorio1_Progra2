@@ -1,0 +1,46 @@
+class Monedero {
+    private double cantidadDinero;
+
+    public Monedero(double cantidadInicial) {
+        cantidadDinero = cantidadInicial;
+    }
+
+    public void meterDinero(double cantidad) {
+        if (cantidad > 0) {
+            cantidadDinero += cantidad;
+            System.out.println("Se ha añadido " + cantidad + " unidades al monedero.");
+        } else {
+            System.out.println("La cantidad a añadir debe ser positiva.");
+        }
+    }
+
+    public void sacarDinero(double cantidad) {
+        if (cantidad <= cantidadDinero) {
+            cantidadDinero -= cantidad;
+            System.out.println("Se ha sacado " + cantidad + " unidades del monedero.");
+        } else {
+            System.out.println("No hay suficiente dinero en el monedero.");
+        }
+    }
+
+    public double consultarDisponible() {
+        return cantidadDinero;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Monedero miMonedero = new Monedero(100.0);
+
+        System.out.println("Dinero disponible en el monedero: Q." + miMonedero.consultarDisponible());
+
+        miMonedero.meterDinero(50.0);
+        System.out.println("Dinero disponible en el monedero: Q." + miMonedero.consultarDisponible());
+
+        miMonedero.sacarDinero(30.0);
+        System.out.println("Dinero disponible en el monedero: Q." + miMonedero.consultarDisponible());
+
+        miMonedero.sacarDinero(150.0);
+        System.out.println("Dinero disponible en el monedero: Q." + miMonedero.consultarDisponible());
+    }
+}
